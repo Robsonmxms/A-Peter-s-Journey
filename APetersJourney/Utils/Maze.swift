@@ -18,7 +18,7 @@ class Maze {
         size: CGSize,
         brickWidth: CGFloat,
         floorWallsProportion: Double
-    ){
+    ) {
         self.size = size
         self.brickWidth = brickWidth
         self.floorWallsProportion = floorWallsProportion
@@ -26,9 +26,9 @@ class Maze {
     }
 
     private func buildGrid() {
-        for column in stride(from: brickWidth/2, to: size.height, by: brickWidth) {
-            for row in stride(from: brickWidth/2, to: size.width, by: brickWidth) {
-                walls.append(CGPoint(x: row, y: column))
+        for theColumn in stride(from: brickWidth/2, to: size.height, by: brickWidth) {
+            for theRow in stride(from: brickWidth/2, to: size.width, by: brickWidth) {
+                walls.append(CGPoint(x: theRow, y: theColumn))
             }
         }
 
@@ -85,10 +85,8 @@ class Maze {
     private func getAvailablePoints(points: [CGPoint]) -> [CGPoint] {
         var availablePoints: [CGPoint] = []
 
-        for point in points {
-            if walls.contains(point) {
+        for point in points where walls.contains(point) {
                 availablePoints.append(point)
-            }
         }
 
         return availablePoints
@@ -102,7 +100,7 @@ class Maze {
         return walls
     }
 
-    func getWallsAsSKSpriteNode() -> [SKSpriteNode]{
+    func getWallsAsSKSpriteNode() -> [SKSpriteNode] {
 
         var spriteNodes: [SKSpriteNode] = []
 

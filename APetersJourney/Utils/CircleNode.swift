@@ -14,7 +14,10 @@ class CircleNode: SKShapeNode {
 
         self.position = position
 
-        let circle = CGPath(ellipseIn: CGRect(x: -radius, y: -radius, width: radius*1.5, height: radius*1.5), transform: nil)
+        let circle = CGPath(
+            ellipseIn: CGRect(x: -radius, y: -radius, width: radius*1.5, height: radius*1.5),
+            transform: nil
+        )
 
         self.path = circle
         self.fillColor = color

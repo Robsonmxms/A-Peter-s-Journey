@@ -103,11 +103,16 @@ class MazeScene: SKScene {
 
     override func update(_ currentTime: TimeInterval) {
         if let gravityX = manager?.deviceMotion?.gravity.y,
-           let gravityY = manager?.deviceMotion?.gravity.x
-           {
-            boyAsCircle.physicsBody?.applyImpulse(CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150))
-            momAsCircle.physicsBody?.applyImpulse(CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150))
-            dollAsCircle.physicsBody?.applyImpulse(CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150))
+           let gravityY = manager?.deviceMotion?.gravity.x {
+            boyAsCircle.physicsBody?.applyImpulse(
+                CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150)
+            )
+            momAsCircle.physicsBody?.applyImpulse(
+                CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150)
+            )
+            dollAsCircle.physicsBody?.applyImpulse(
+                CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150)
+            )
         }
 
     }
@@ -116,4 +121,3 @@ class MazeScene: SKScene {
         seconds = (seconds ?? 0.0) + 0.01
     }
 }
-
