@@ -63,7 +63,6 @@
 				FED8A9CE29D5A92900457F14 /* Data */,
 				FED8A9CF29D5A93300457F14 /* Domain */,
 				FED8A9D029D5A93A00457F14 /* Utils */,
-				FED8A9C329D5A82F00457F14 /* LaunchScreen.storyboard */,
 			);
 			path = "A Peter's Journey";
 			sourceTree = "<group>";
@@ -80,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */,
+				FED8A9C329D5A82F00457F14 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -118,6 +118,7 @@
 		FED8A9D129D5A9DB00457F14 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
+				FED8A9D929D5B26C00457F14 /* Model */,
 				FED8A9D429D5A9F200457F14 /* View */,
 				FED8A9D329D5A9EC00457F14 /* Controller */,
 				FED8A9D229D5A9E400457F14 /* Scene */,
@@ -146,6 +147,13 @@
 				FED8A9BC29D5A82E00457F14 /* MazeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FED8A9D929D5B26C00457F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
