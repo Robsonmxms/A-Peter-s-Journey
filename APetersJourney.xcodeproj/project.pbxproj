@@ -11,6 +11,7 @@
 		146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */; };
 		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		146B2B1B29D71F4A00DFB563 /* APetersJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */; };
+		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
 		FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9BC29D5A82E00457F14 /* MazeView.swift */; };
 		FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED8A9C129D5A82F00457F14 /* Assets.xcassets */; };
@@ -307,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146B2B1B29D71F4A00DFB563 /* APetersJourneyTests.swift in Sources */,
+				146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
