@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146B2B0F29D70E7100DFB563 /* Circle3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B0E29D70E7100DFB563 /* Circle3D.swift */; };
+		146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */; };
+		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
+		146B2B1B29D71F4A00DFB563 /* APetersJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
-		FED8A9BB29D5A82E00457F14 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9BA29D5A82E00457F14 /* MazeScene.swift */; };
 		FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9BC29D5A82E00457F14 /* MazeView.swift */; };
 		FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED8A9C129D5A82F00457F14 /* Assets.xcassets */; };
 		FED8A9C529D5A82F00457F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED8A9C329D5A82F00457F14 /* LaunchScreen.storyboard */; };
@@ -16,10 +19,24 @@
 		FED8A9D829D5AD7F00457F14 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9D729D5AD7F00457F14 /* Maze.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		146B2B1C29D71F4A00DFB563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FED8A9A929D5A82E00457F14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FED8A9B029D5A82E00457F14;
+			remoteInfo = APetersJourney;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		146B2B0E29D70E7100DFB563 /* Circle3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle3D.swift; sourceTree = "<group>"; };
+		146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereSKNode.swift; sourceTree = "<group>"; };
+		146B2B1229D7136D00DFB563 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
+		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APetersJourneyTests.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeterJourneyApp.swift; sourceTree = "<group>"; };
-		FED8A9BA29D5A82E00457F14 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
 		FED8A9BC29D5A82E00457F14 /* MazeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeView.swift; sourceTree = "<group>"; };
 		FED8A9C129D5A82F00457F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FED8A9C429D5A82F00457F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,11 +44,30 @@
 		FED8A9D729D5AD7F00457F14 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		146B2B1529D71F4A00DFB563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		146B2B1929D71F4A00DFB563 /* APetersJourneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */,
+			);
+			path = APetersJourneyTests;
+			sourceTree = "<group>";
+		};
 		FED8A9A829D5A82E00457F14 = {
 			isa = PBXGroup;
 			children = (
 				FED8A9B329D5A82E00457F14 /* APetersJourney */,
+				146B2B1929D71F4A00DFB563 /* APetersJourneyTests */,
 				FED8A9B229D5A82E00457F14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				FED8A9B129D5A82E00457F14 /* APetersJourney.app */,
+				146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +138,8 @@
 			children = (
 				FED8A9D529D5AD2F00457F14 /* CircleNode.swift */,
 				FED8A9D729D5AD7F00457F14 /* Maze.swift */,
+				146B2B0E29D70E7100DFB563 /* Circle3D.swift */,
+				146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -119,7 +158,7 @@
 		FED8A9D229D5A9E400457F14 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				FED8A9BA29D5A82E00457F14 /* MazeScene.swift */,
+				146B2B1229D7136D00DFB563 /* MazeScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -149,6 +188,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		146B2B1729D71F4A00DFB563 /* APetersJourneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146B2B1E29D71F4A00DFB563 /* Build configuration list for PBXNativeTarget "APetersJourneyTests" */;
+			buildPhases = (
+				146B2B1429D71F4A00DFB563 /* Sources */,
+				146B2B1529D71F4A00DFB563 /* Frameworks */,
+				146B2B1629D71F4A00DFB563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146B2B1D29D71F4A00DFB563 /* PBXTargetDependency */,
+			);
+			name = APetersJourneyTests;
+			productName = APetersJourneyTests;
+			productReference = 146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FED8A9B029D5A82E00457F14 /* APetersJourney */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FED8A9C829D5A82F00457F14 /* Build configuration list for PBXNativeTarget "APetersJourney" */;
@@ -176,6 +233,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					146B2B1729D71F4A00DFB563 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FED8A9B029D5A82E00457F14;
+					};
 					FED8A9B029D5A82E00457F14 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -195,11 +256,19 @@
 			projectRoot = "";
 			targets = (
 				FED8A9B029D5A82E00457F14 /* APetersJourney */,
+				146B2B1729D71F4A00DFB563 /* APetersJourneyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		146B2B1629D71F4A00DFB563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FED8A9AF29D5A82E00457F14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,19 +302,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		146B2B1429D71F4A00DFB563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B2B1B29D71F4A00DFB563 /* APetersJourneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FED8A9AD29D5A82E00457F14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED8A9BB29D5A82E00457F14 /* MazeScene.swift in Sources */,
 				FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */,
 				FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */,
+				146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */,
 				FED8A9D629D5AD2F00457F14 /* CircleNode.swift in Sources */,
+				146B2B0F29D70E7100DFB563 /* Circle3D.swift in Sources */,
 				FED8A9D829D5AD7F00457F14 /* Maze.swift in Sources */,
+				146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		146B2B1D29D71F4A00DFB563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FED8A9B029D5A82E00457F14 /* APetersJourney */;
+			targetProxy = 146B2B1C29D71F4A00DFB563 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FED8A9C329D5A82F00457F14 /* LaunchScreen.storyboard */ = {
@@ -259,6 +346,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		146B2B1F29D71F4A00DFB563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Marcelo-de-Arau-jo.APetersJourneyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APetersJourney.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/APetersJourney";
+			};
+			name = Debug;
+		};
+		146B2B2029D71F4A00DFB563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Marcelo-de-Arau-jo.APetersJourneyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APetersJourney.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/APetersJourney";
+			};
+			name = Release;
+		};
 		FED8A9C629D5A82F00457F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -440,6 +563,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		146B2B1E29D71F4A00DFB563 /* Build configuration list for PBXNativeTarget "APetersJourneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146B2B1F29D71F4A00DFB563 /* Debug */,
+				146B2B2029D71F4A00DFB563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FED8A9AC29D5A82E00457F14 /* Build configuration list for PBXProject "APetersJourney" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
