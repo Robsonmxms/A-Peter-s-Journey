@@ -25,7 +25,6 @@ struct MazeViewRepresentable: UIViewRepresentable {
     func updateUIView(_ view: SKView, context: Context) {
         // Empty
     }
-
 }
 
 struct MazeView: View {
@@ -33,6 +32,5 @@ struct MazeView: View {
         VStack {
             MazeViewRepresentable().ignoresSafeArea()
         }
-
     }
 }
