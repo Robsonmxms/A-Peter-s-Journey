@@ -1,29 +1,32 @@
 //
 //  MazeScene.swift
-//  A Peter's Journey
+//  APetersJourney
 //
-//  Created by Robson Lima Lopes on 30/03/23.
+//  Created by Marcelo De Araújo on 31/03/23.
 //
 
 import SpriteKit
 import CoreMotion
+import SceneKit
 
-class MazeScene: SKScene {
+class MazeScene: SKScene, SKPhysicsContactDelegate {
 
-    private var manager: CMMotionManager? = CMMotionManager()
-    private var timer: Timer?
+    internal var manager: CMMotionManager? = CMMotionManager()
+    internal var timer: Timer?
     internal var seconds: Double?
 
-    private let brickWidth: CGFloat = 30
+    internal let brickWidth: CGFloat = 30
 
-    var floor: [CGPoint]?
-    var wallBricksAsNodes: [SKSpriteNode]?
+    internal var floor: [CGPoint]?
+    internal var wallBricksAsNodes: [SKSpriteNode]?
 
-    private var boyAsCircle: SKShapeNode = SKShapeNode()
-    private var momAsCircle: SKShapeNode = SKShapeNode()
-    private var dollAsCircle: SKShapeNode = SKShapeNode()
+    internal lazy var boyAsSphereSKNode = SKNode()
+    internal lazy var momAsSphereSKNode = SKNode()
+    internal lazy var dollAsSphereSKNode = SKNode()
 
     override func didMove(to view: SKView) {
+
+        physicsWorld.contactDelegate = self
 
         let frameAdjusted = CGRect(
             x: frame.origin.x,
@@ -52,7 +55,41 @@ class MazeScene: SKScene {
 
     }
 
-    private func buildMazeInScene() {
+    internal func buildBallsInScene() {
+
+        let boyAsSphereSCNNode = SphereSCNNode(color: .blue) as SCNNode
+
+        boyAsSphereSKNode = SphereSKNode(
+            brickWidth: brickWidth,
+            sphereSCNNode: boyAsSphereSCNNode,
+            position: floor!.randomElement()!
+        ) as SKNode
+
+        addChild(boyAsSphereSKNode)
+
+        let momAsSphereSCNNode = SphereSCNNode(color: .red) as SCNNode
+
+        momAsSphereSKNode = SphereSKNode(
+            brickWidth: brickWidth,
+            sphereSCNNode: momAsSphereSCNNode,
+            position: floor!.randomElement()!
+        ) as SKNode
+
+        addChild(momAsSphereSKNode)
+
+        let dollAsSphereSCNNode = SphereSCNNode(color: .white) as SCNNode
+
+        dollAsSphereSKNode = SphereSKNode(
+            brickWidth: brickWidth,
+            sphereSCNNode: dollAsSphereSCNNode,
+            position: floor!.randomElement()!
+        ) as SKNode
+
+        addChild(dollAsSphereSKNode)
+    }
+
+    internal func buildMazeInScene() {
+
         let maze: Maze = Maze(
             size: size,
             brickWidth: brickWidth,
@@ -68,53 +105,79 @@ class MazeScene: SKScene {
         }
     }
 
-    private func buildBallsInScene() {
-        boyAsCircle = CircleNode(
-            radius: brickWidth/2,
-            position: floor!.randomElement()!,
-            color: .blue
-        ) as SKShapeNode
+    internal func buildBackgroundScene() {
 
-        addChild(boyAsCircle)
-
-        momAsCircle = CircleNode(
-            radius: brickWidth/2,
-            position: floor!.randomElement()!,
-            color: .red
-        ) as SKShapeNode
-
-        addChild(momAsCircle)
-
-        dollAsCircle = CircleNode(
-            radius: brickWidth/2,
-            position: floor!.randomElement()!,
-            color: .white
-        ) as SKShapeNode
-
-        addChild(dollAsCircle)
-    }
-
-    private func buildBackgroundScene() {
         let background = SKSpriteNode(imageNamed: "floor")
         background.position = CGPoint(x: size.width, y: size.height)
         background.zPosition = -1
         addChild(background)
     }
 
+    func didBegin(_ contact: SKPhysicsContact) {
+        let bodyA = contact.bodyA.node
+        let bodyB = contact.bodyB.node
+
+        let isBoyCatchingDoll = (bodyA == boyAsSphereSKNode && bodyB == dollAsSphereSKNode)
+        let isDollCatchingBoy = (bodyA == dollAsSphereSKNode && bodyB == boyAsSphereSKNode)
+
+        let isMomCatchingBoy = (bodyA == momAsSphereSKNode && bodyB == boyAsSphereSKNode)
+        let isBoyCatchingMom = (bodyA == boyAsSphereSKNode && bodyB == momAsSphereSKNode)
+
+        let isMomCatchingDoll = (bodyA == momAsSphereSKNode && bodyB == dollAsSphereSKNode)
+        let isDollCatchingMom = (bodyA == dollAsSphereSKNode && bodyB == momAsSphereSKNode)
+
+//         Verifique se a boy tocou na doll
+        if isBoyCatchingDoll || isDollCatchingBoy {
+            let alert = UIAlertController(
+                title: "Vc pegou a boneca",
+                message: "Parabéns!",
+                preferredStyle: .alert
+            )
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            return
+        }
+
+//         Verifique se a mom tocou na boy
+        if  isMomCatchingBoy || isBoyCatchingMom {
+            let alert = UIAlertController(title: "Mamãe te pegou", message: "Perdeu", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            return
+        }
+
+//         Verifique se a mom tocou na doll
+        if isMomCatchingDoll || isDollCatchingMom {
+            let alert = UIAlertController(
+                title: "Mamãe pegou a boneca",
+                message: "Vc voltará ao inicio",
+                preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            return
+        }
+    }
+
     override func update(_ currentTime: TimeInterval) {
         if let gravityX = manager?.deviceMotion?.gravity.y,
            let gravityY = manager?.deviceMotion?.gravity.x {
-            boyAsCircle.physicsBody?.applyImpulse(
-                CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150)
+
+            boyAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
+                dx: CGFloat(-gravityX)*150,
+                dy: CGFloat(gravityY)*150)
             )
-            momAsCircle.physicsBody?.applyImpulse(
-                CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150)
+            momAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
+                dx: CGFloat(-gravityX)*150,
+                dy: CGFloat(gravityY)*150)
             )
-            dollAsCircle.physicsBody?.applyImpulse(
-                CGVector(dx: CGFloat(-gravityX)*150, dy: CGFloat(gravityY)*150)
+            dollAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
+                dx: CGFloat(-gravityX)*150,
+                dy: CGFloat(gravityY)*150)
             )
         }
-
     }
 
     @objc func increaseTimer() {
