@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1434F5D929DAFB5B00188C8F /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9D729D5AD7F00457F14 /* Maze.swift */; };
+		1434F5DA29DAFB5B00188C8F /* Circle3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B0E29D70E7100DFB563 /* Circle3D.swift */; };
+		1434F5DB29DAFB5B00188C8F /* SphereSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */; };
+		1434F5DC29DAFB5B00188C8F /* CircleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9D529D5AD2F00457F14 /* CircleNode.swift */; };
+		1434F5DF29DAFFFC00188C8F /* MazeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F5DE29DAFFFC00188C8F /* MazeTest.swift */; };
+		1434F5E129DB10FE00188C8F /* Circle3DTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F5E029DB10FE00188C8F /* Circle3DTest.swift */; };
+		1434F5E329DB16A800188C8F /* SphereSKNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */; };
 		146B2B0F29D70E7100DFB563 /* Circle3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B0E29D70E7100DFB563 /* Circle3D.swift */; };
 		146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */; };
 		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
-		146B2B1B29D71F4A00DFB563 /* APetersJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */; };
+		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
 		FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9BC29D5A82E00457F14 /* MazeView.swift */; };
@@ -31,11 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1434F5DE29DAFFFC00188C8F /* MazeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeTest.swift; sourceTree = "<group>"; };
+		1434F5E029DB10FE00188C8F /* Circle3DTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle3DTest.swift; sourceTree = "<group>"; };
+		1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereSKNodeTest.swift; sourceTree = "<group>"; };
 		146B2B0E29D70E7100DFB563 /* Circle3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle3D.swift; sourceTree = "<group>"; };
 		146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereSKNode.swift; sourceTree = "<group>"; };
 		146B2B1229D7136D00DFB563 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APetersJourneyTests.swift; sourceTree = "<group>"; };
+		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeterJourneyApp.swift; sourceTree = "<group>"; };
 		FED8A9BC29D5A82E00457F14 /* MazeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeView.swift; sourceTree = "<group>"; };
@@ -59,7 +69,10 @@
 		146B2B1929D71F4A00DFB563 /* APetersJourneyTests */ = {
 			isa = PBXGroup;
 			children = (
-				146B2B1A29D71F4A00DFB563 /* APetersJourneyTests.swift */,
+				146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */,
+				1434F5DE29DAFFFC00188C8F /* MazeTest.swift */,
+				1434F5E029DB10FE00188C8F /* Circle3DTest.swift */,
+				1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */,
 			);
 			path = APetersJourneyTests;
 			sourceTree = "<group>";
@@ -307,8 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146B2B1B29D71F4A00DFB563 /* APetersJourneyTests.swift in Sources */,
+				1434F5DB29DAFB5B00188C8F /* SphereSKNode.swift in Sources */,
+				146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */,
 				146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */,
+				1434F5DC29DAFB5B00188C8F /* CircleNode.swift in Sources */,
+				1434F5DA29DAFB5B00188C8F /* Circle3D.swift in Sources */,
+				1434F5E329DB16A800188C8F /* SphereSKNodeTest.swift in Sources */,
+				1434F5DF29DAFFFC00188C8F /* MazeTest.swift in Sources */,
+				1434F5E129DB10FE00188C8F /* Circle3DTest.swift in Sources */,
+				1434F5D929DAFB5B00188C8F /* Maze.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
