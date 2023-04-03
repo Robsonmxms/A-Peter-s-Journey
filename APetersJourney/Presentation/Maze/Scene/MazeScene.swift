@@ -59,30 +59,42 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
 
         let boyAsSphereSCNNode = SphereSCNNode(color: .blue) as SCNNode
 
+        let boyPosition = floor!.randomElement()!
+        let boyPositionIndex = floor!.firstIndex(of: boyPosition)
+
         boyAsSphereSKNode = SphereSKNode(
             brickWidth: brickWidth,
             sphereSCNNode: boyAsSphereSCNNode,
-            position: floor!.randomElement()!
+            position: boyPosition
         ) as SKNode
 
         addChild(boyAsSphereSKNode)
 
         let momAsSphereSCNNode = SphereSCNNode(color: .red) as SCNNode
 
+        let momPosition = getRandomProportionPosition(
+            boyPositionIndex: boyPositionIndex!,
+            proportion: 0.6
+        )
+
         momAsSphereSKNode = SphereSKNode(
             brickWidth: brickWidth,
             sphereSCNNode: momAsSphereSCNNode,
-            position: floor!.randomElement()!
+            position: momPosition
         ) as SKNode
 
         addChild(momAsSphereSKNode)
 
         let dollAsSphereSCNNode = SphereSCNNode(color: .white) as SCNNode
 
+        let dollPosition = getRandomProportionPosition(
+            boyPositionIndex: boyPositionIndex!,
+            proportion: 0.8)
+
         dollAsSphereSKNode = SphereSKNode(
             brickWidth: brickWidth,
             sphereSCNNode: dollAsSphereSCNNode,
-            position: floor!.randomElement()!
+            position: dollPosition
         ) as SKNode
 
         addChild(dollAsSphereSKNode)
@@ -103,6 +115,33 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
         for wallBrick in wallBricksAsNodes! {
             addChild(wallBrick)
         }
+    }
+
+    internal func getRandomProportionPosition(
+        boyPositionIndex: Int,
+        proportion: Double
+    ) -> CGPoint {
+        let sublist: Array = {
+            let proportionIndex = Int(Double(floor!.count)*proportion)
+
+            let distBetweenBoyAndProportionIndex = floor!.distance(
+                from: boyPositionIndex,
+                to: proportionIndex
+            )
+
+            let distBetweenProportionIndexAndLastElem = floor!.distance(
+                from: proportionIndex,
+                to: floor!.count-1
+            )
+
+            if distBetweenProportionIndexAndLastElem <= distBetweenBoyAndProportionIndex {
+                return Array(floor!.suffix(distBetweenProportionIndexAndLastElem))
+            } else {
+                return Array(floor!.prefix(distBetweenProportionIndexAndLastElem))
+            }
+        }()
+
+        return sublist.randomElement()!
     }
 
     internal func buildBackgroundScene() {
