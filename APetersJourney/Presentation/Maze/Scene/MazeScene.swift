@@ -152,6 +152,49 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
     }
 
+    func showWinner() {
+
+        let alert = UIAlertController(
+            title: "Vc pegou a boneca! 🥇",
+            message: "Parabéns!",
+            preferredStyle: .alert
+        )
+        let newGameAction = UIAlertAction(title: "Novo Jogo", style: .default) { _ in
+            self.removeAllMazeNodes()
+            self.buildMazeInScene()
+            self.removeBallsFromScene()
+            self.buildBallsInScene()
+        }
+        alert.addAction(newGameAction)
+        self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
+
+    }
+
+    func showMomCatchDoll() {
+
+        let alert = UIAlertController(
+            title: "Mamãe pegou a boneca 😅",
+            message: "Tente novamente",
+            preferredStyle: .alert
+        )
+        let newGameAction = UIAlertAction(title: "Reinicie a Fase", style: .default) { _ in
+            self.removeBallsFromScene()
+            self.buildBallsInScene()
+        }
+        alert.addAction(newGameAction)
+        self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+
+    func removeAllMazeNodes() {
+        wallBricksAsNodes!.forEach { $0.removeFromParent() }
+    }
+
+    func removeBallsFromScene() {
+        boyAsSphereSKNode.removeFromParent()
+        dollAsSphereSKNode.removeFromParent()
+        momAsSphereSKNode.removeFromParent()
+    }
+
     func didBegin(_ contact: SKPhysicsContact) {
         let bodyA = contact.bodyA.node
         let bodyB = contact.bodyB.node
@@ -167,15 +210,7 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
 
 //         Verifique se a boy tocou na doll
         if isBoyCatchingDoll || isDollCatchingBoy {
-            let alert = UIAlertController(
-                title: "Vc pegou a boneca",
-                message: "Parabéns!",
-                preferredStyle: .alert
-            )
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
-            return
+            showWinner()
         }
 
 //         Verifique se a mom tocou na boy
@@ -189,14 +224,7 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
 
 //         Verifique se a mom tocou na doll
         if isMomCatchingDoll || isDollCatchingMom {
-            let alert = UIAlertController(
-                title: "Mamãe pegou a boneca",
-                message: "Vc voltará ao inicio",
-                preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
-            return
+            showMomCatchDoll()
         }
     }
 
