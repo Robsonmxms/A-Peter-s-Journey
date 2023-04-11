@@ -20,6 +20,8 @@
 		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		4C7EE90A29E43778009C0A0B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EE90929E43778009C0A0B /* InitialView.swift */; };
+		FE47713229E5788400764380 /* MazeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713129E5788400764380 /* MazeModel.swift */; };
+		FE47713629E583CD00764380 /* SKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713529E583CD00764380 /* SKScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
 		FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9BC29D5A82E00457F14 /* MazeView.swift */; };
 		FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED8A9C129D5A82F00457F14 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
 		4C7EE90929E43778009C0A0B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		FE47713129E5788400764380 /* MazeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeModel.swift; sourceTree = "<group>"; };
+		FE47713529E583CD00764380 /* SKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeterJourneyApp.swift; sourceTree = "<group>"; };
 		FED8A9BC29D5A82E00457F14 /* MazeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,22 @@
 				1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */,
 			);
 			path = APetersJourneyTests;
+			sourceTree = "<group>";
+		};
+		FE47713029E5786200764380 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE47713129E5788400764380 /* MazeModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FE47713329E5839800764380 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE47713529E583CD00764380 /* SKScene.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FED8A9A829D5A82E00457F14 = {
@@ -152,6 +172,7 @@
 		FED8A9D029D5A93A00457F14 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FE47713329E5839800764380 /* Extensions */,
 				FED8A9D529D5AD2F00457F14 /* CircleNode.swift */,
 				FED8A9D729D5AD7F00457F14 /* Maze.swift */,
 				146B2B0E29D70E7100DFB563 /* Circle3D.swift */,
@@ -163,7 +184,7 @@
 		FED8A9D129D5A9DB00457F14 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
-				FED8A9D929D5B26C00457F14 /* Model */,
+				FE47713029E5786200764380 /* Model */,
 				FED8A9D429D5A9F200457F14 /* View */,
 				FED8A9D329D5A9EC00457F14 /* Controller */,
 				FED8A9D229D5A9E400457F14 /* Scene */,
@@ -193,13 +214,6 @@
 				4C7EE90929E43778009C0A0B /* InitialView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FED8A9D929D5B26C00457F14 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +357,12 @@
 				4C7EE90A29E43778009C0A0B /* InitialView.swift in Sources */,
 				FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */,
 				146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */,
+				FE47713629E583CD00764380 /* SKScene.swift in Sources */,
 				FED8A9D629D5AD2F00457F14 /* CircleNode.swift in Sources */,
 				146B2B0F29D70E7100DFB563 /* Circle3D.swift in Sources */,
 				FED8A9D829D5AD7F00457F14 /* Maze.swift in Sources */,
 				146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */,
+				FE47713229E5788400764380 /* MazeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 964GK867Y7;
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -561,7 +577,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 964GK867Y7;
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

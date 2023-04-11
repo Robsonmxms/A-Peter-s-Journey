@@ -9,20 +9,13 @@ import SpriteKit
 import CoreMotion
 import SceneKit
 
-class MazeScene: SKScene, SKPhysicsContactDelegate {
+class MazeScene: SKScene {
 
-    internal var manager: CMMotionManager? = CMMotionManager()
-    internal var timer: Timer?
-    internal var seconds: Double?
+    var manager: CMMotionManager? = CMMotionManager()
+    var timer: Timer?
+    var seconds: Double?
 
-    internal let brickWidth: CGFloat = 30
-
-    internal var floor: [CGPoint]?
-    internal var wallBricksAsNodes: [SKSpriteNode]?
-
-    internal lazy var boyAsSphereSKNode = SKNode()
-    internal lazy var momAsSphereSKNode = SKNode()
-    internal lazy var dollAsSphereSKNode = SKNode()
+    var mazeModel = MazeModel()
 
     override func didMove(to view: SKView) {
 
@@ -49,102 +42,115 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
             repeats: true
         )
 
+        buildSceneNodes()
+
+    }
+
+    private func buildSceneNodes() {
         buildMazeInScene()
         buildBallsInScene()
         buildBackgroundScene()
-
     }
 
-    internal func buildBallsInScene() {
-
-        let boyAsSphereSCNNode = SphereSCNNode(color: .blue) as SCNNode
-
-        let boyPosition = floor!.randomElement()!
-        let boyPositionIndex = floor!.firstIndex(of: boyPosition)
-
-        boyAsSphereSKNode = SphereSKNode(
-            brickWidth: brickWidth,
-            sphereSCNNode: boyAsSphereSCNNode,
-            position: boyPosition
-        ) as SKNode
-
-        addChild(boyAsSphereSKNode)
-
-        let momAsSphereSCNNode = SphereSCNNode(color: .red) as SCNNode
-
-        let momPosition = getRandomProportionPosition(
-            boyPositionIndex: boyPositionIndex!,
-            proportion: 0.6
-        )
-
-        momAsSphereSKNode = SphereSKNode(
-            brickWidth: brickWidth,
-            sphereSCNNode: momAsSphereSCNNode,
-            position: momPosition
-        ) as SKNode
-
-        addChild(momAsSphereSKNode)
-
-        let dollAsSphereSCNNode = SphereSCNNode(color: .white) as SCNNode
-
-        let dollPosition = getRandomProportionPosition(
-            boyPositionIndex: boyPositionIndex!,
-            proportion: 0.8)
-
-        dollAsSphereSKNode = SphereSKNode(
-            brickWidth: brickWidth,
-            sphereSCNNode: dollAsSphereSCNNode,
-            position: dollPosition
-        ) as SKNode
-
-        addChild(dollAsSphereSKNode)
-    }
-
-    internal func buildMazeInScene() {
+    private func buildMazeInScene() {
 
         let maze: Maze = Maze(
             size: size,
-            brickWidth: brickWidth,
+            brickWidth: mazeModel.brickWidth,
             floorWallsProportion: 0.1
         )
 
-        floor = maze.getFloor()
+        mazeModel.floor = maze.getFloor()
 
-        wallBricksAsNodes = maze.getWallsAsSKSpriteNode()
+        mazeModel.wallBricksAsNodes = maze.getWallsAsSKSpriteNode()
 
-        for wallBrick in wallBricksAsNodes! {
+        for wallBrick in mazeModel.wallBricksAsNodes! {
             addChild(wallBrick)
         }
     }
 
-    internal func getRandomProportionPosition(
+    private func buildBallsInScene() {
+        buildBoyInScene()
+        buildMomInScene()
+        buildDollInScene()
+    }
+
+    private func buildBoyInScene() {
+        let boyAsSphereSCNNode = SphereSCNNode(color: .blue) as SCNNode
+
+        mazeModel.boyPosition = mazeModel.floor!.randomElement()!
+        mazeModel.boyPositionIndex = mazeModel.floor!.firstIndex(of: mazeModel.boyPosition!)
+
+        mazeModel.boyAsSphereSKNode = SphereSKNode(
+            brickWidth: mazeModel.brickWidth,
+            sphereSCNNode: boyAsSphereSCNNode,
+            position: mazeModel.boyPosition!
+        ) as SKNode
+
+        addChild(mazeModel.boyAsSphereSKNode)
+    }
+
+    private func buildMomInScene() {
+        let momAsSphereSCNNode = SphereSCNNode(color: .red) as SCNNode
+
+        mazeModel.momPosition = getRandomProportionPosition(
+            boyPositionIndex: mazeModel.boyPositionIndex!,
+            proportion: 0.6
+        )
+
+        mazeModel.momAsSphereSKNode = SphereSKNode(
+            brickWidth: mazeModel.brickWidth,
+            sphereSCNNode: momAsSphereSCNNode,
+            position: mazeModel.momPosition!
+        ) as SKNode
+
+        addChild(mazeModel.momAsSphereSKNode)
+    }
+
+    private func buildDollInScene() {
+        let dollAsSphereSCNNode = SphereSCNNode(color: .white) as SCNNode
+
+        mazeModel.dollPosition = getRandomProportionPosition(
+            boyPositionIndex: mazeModel.boyPositionIndex!,
+            proportion: 0.8)
+
+        mazeModel.dollAsSphereSKNode = SphereSKNode(
+            brickWidth: mazeModel.brickWidth,
+            sphereSCNNode: dollAsSphereSCNNode,
+            position: mazeModel.dollPosition!
+        ) as SKNode
+
+        addChild(mazeModel.dollAsSphereSKNode)
+    }
+
+    private func getRandomProportionPosition(
         boyPositionIndex: Int,
         proportion: Double
     ) -> CGPoint {
         let sublist: Array = {
-            let proportionIndex = Int(Double(floor!.count)*proportion)
+            let proportionIndex = Int(Double(mazeModel.floor!.count)*proportion)
 
-            let distBetweenBoyAndProportionIndex = floor!.distance(
+            let distBetweenBoyAndProportionIndex = mazeModel.floor!.distance(
                 from: boyPositionIndex,
                 to: proportionIndex
             )
 
-            let distBetweenProportionIndexAndLastElem = floor!.distance(
+            let distBetweenProportionIndexAndLastElem = mazeModel.floor!.distance(
                 from: proportionIndex,
-                to: floor!.count-1
+                to: mazeModel.floor!.count-1
             )
 
             if distBetweenProportionIndexAndLastElem <= distBetweenBoyAndProportionIndex {
-                return Array(floor!.suffix(distBetweenProportionIndexAndLastElem))
+                return Array(mazeModel.floor!.suffix(distBetweenProportionIndexAndLastElem))
             } else {
-                return Array(floor!.prefix(distBetweenProportionIndexAndLastElem))
+                return Array(mazeModel.floor!.prefix(distBetweenProportionIndexAndLastElem))
             }
         }()
 
         return sublist.randomElement()!
     }
 
-    internal func buildBackgroundScene() {
+    private func buildBackgroundScene() {
 
         let background = SKSpriteNode(imageNamed: "floor")
         background.position = CGPoint(x: size.width, y: size.height)
@@ -152,7 +158,7 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
     }
 
-    func showWinner() {
+    private func showWinner() {
 
         let alert = UIAlertController(
             title: "Vc pegou a boneca! 🥇",
@@ -160,53 +166,61 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
             preferredStyle: .alert
         )
         let newGameAction = UIAlertAction(title: "Novo Jogo", style: .default) { _ in
-            self.removeAllMazeNodes()
-            self.buildMazeInScene()
-            self.removeBallsFromScene()
-            self.buildBallsInScene()
+            self.removeAllNodes()
+            if self.mazeModel.brickWidth >= 15 {
+                self.mazeModel.brickWidth -= 5
+            }
+            self.buildSceneNodes()
         }
         alert.addAction(newGameAction)
         self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
 
     }
 
-    func showMomCatchDoll() {
+    override func update(_ currentTime: TimeInterval) {
+        if let gravityX = manager?.deviceMotion?.gravity.y,
+           let gravityY = manager?.deviceMotion?.gravity.x {
 
-        let alert = UIAlertController(
-            title: "Mamãe pegou a boneca 😅",
-            message: "Tente novamente",
-            preferredStyle: .alert
-        )
-        let newGameAction = UIAlertAction(title: "Reinicie a Fase", style: .default) { _ in
-            self.removeBallsFromScene()
-            self.buildBallsInScene()
+            mazeModel.boyAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
+                dx: CGFloat(-gravityX)*150,
+                dy: CGFloat(gravityY)*150)
+            )
+            mazeModel.momAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
+                dx: CGFloat(-gravityX)*150,
+                dy: CGFloat(gravityY)*150)
+            )
+            mazeModel.dollAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
+                dx: CGFloat(-gravityX)*150,
+                dy: CGFloat(gravityY)*150)
+            )
         }
-        alert.addAction(newGameAction)
-        self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 
-    func removeAllMazeNodes() {
-        wallBricksAsNodes!.forEach { $0.removeFromParent() }
+    @objc func increaseTimer() {
+        seconds = (seconds ?? 0.0) + 0.01
     }
+}
 
-    func removeBallsFromScene() {
-        boyAsSphereSKNode.removeFromParent()
-        dollAsSphereSKNode.removeFromParent()
-        momAsSphereSKNode.removeFromParent()
-    }
+extension MazeScene: SKPhysicsContactDelegate {
 
     func didBegin(_ contact: SKPhysicsContact) {
         let bodyA = contact.bodyA.node
         let bodyB = contact.bodyB.node
 
-        let isBoyCatchingDoll = (bodyA == boyAsSphereSKNode && bodyB == dollAsSphereSKNode)
-        let isDollCatchingBoy = (bodyA == dollAsSphereSKNode && bodyB == boyAsSphereSKNode)
+        let isBoyCatchingDoll = (bodyA == mazeModel.boyAsSphereSKNode &&
+                                 bodyB == mazeModel.dollAsSphereSKNode)
+        let isDollCatchingBoy = (bodyA == mazeModel.dollAsSphereSKNode &&
+                                 bodyB == mazeModel.boyAsSphereSKNode)
 
-        let isMomCatchingBoy = (bodyA == momAsSphereSKNode && bodyB == boyAsSphereSKNode)
-        let isBoyCatchingMom = (bodyA == boyAsSphereSKNode && bodyB == momAsSphereSKNode)
+        let isMomCatchingBoy = (bodyA == mazeModel.momAsSphereSKNode &&
+                                bodyB == mazeModel.boyAsSphereSKNode)
+        let isBoyCatchingMom = (bodyA == mazeModel.boyAsSphereSKNode &&
+                                bodyB == mazeModel.momAsSphereSKNode)
 
-        let isMomCatchingDoll = (bodyA == momAsSphereSKNode && bodyB == dollAsSphereSKNode)
-        let isDollCatchingMom = (bodyA == dollAsSphereSKNode && bodyB == momAsSphereSKNode)
+        let isMomCatchingDoll = (bodyA == mazeModel.momAsSphereSKNode &&
+                                 bodyB == mazeModel.dollAsSphereSKNode)
+        let isDollCatchingMom = (bodyA == mazeModel.dollAsSphereSKNode &&
+                                 bodyB == mazeModel.momAsSphereSKNode)
 
 //         Verifique se a boy tocou na doll
         if isBoyCatchingDoll || isDollCatchingBoy {
@@ -216,7 +230,9 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
 //         Verifique se a mom tocou na boy
         if  isMomCatchingBoy || isBoyCatchingMom {
             let alert = UIAlertController(title: "Mamãe te pegou", message: "Perdeu", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let action = UIAlertAction(title: "OK", style: .default) {(_) in
+                self.reloadSpawnPoints()
+            }
             alert.addAction(action)
             self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
             return
@@ -228,26 +244,23 @@ class MazeScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
-    override func update(_ currentTime: TimeInterval) {
-        if let gravityX = manager?.deviceMotion?.gravity.y,
-           let gravityY = manager?.deviceMotion?.gravity.x {
-
-            boyAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
-                dx: CGFloat(-gravityX)*150,
-                dy: CGFloat(gravityY)*150)
-            )
-            momAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
-                dx: CGFloat(-gravityX)*150,
-                dy: CGFloat(gravityY)*150)
-            )
-            dollAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
-                dx: CGFloat(-gravityX)*150,
-                dy: CGFloat(gravityY)*150)
-            )
-        }
+    private func reloadSpawnPoints() {
+        mazeModel.boyAsSphereSKNode.position = mazeModel.boyPosition!
+        mazeModel.momAsSphereSKNode.position = mazeModel.momPosition!
+        mazeModel.dollAsSphereSKNode.position = mazeModel.dollPosition!
     }
 
-    @objc func increaseTimer() {
-        seconds = (seconds ?? 0.0) + 0.01
+    private func showMomCatchDoll() {
+
+        let alert = UIAlertController(
+            title: "Mamãe pegou a boneca 😅",
+            message: "Tente novamente",
+            preferredStyle: .alert
+        )
+        let newGameAction = UIAlertAction(title: "Reinicie a Fase", style: .default) { _ in
+            self.reloadSpawnPoints()
+        }
+        alert.addAction(newGameAction)
+        self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 }
