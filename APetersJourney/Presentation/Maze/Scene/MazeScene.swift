@@ -41,6 +41,7 @@ class MazeScene: SKScene {
             userInfo: nil,
             repeats: true
         )
+        self.backgroundColor = UIColor(named: "MazeBackground")!
 
         buildSceneNodes()
 
@@ -49,7 +50,6 @@ class MazeScene: SKScene {
     private func buildSceneNodes() {
         buildMazeInScene()
         buildBallsInScene()
-        buildBackgroundScene()
     }
 
     private func buildMazeInScene() {
@@ -76,14 +76,19 @@ class MazeScene: SKScene {
     }
 
     private func buildBoyInScene() {
+        // FIXME: Replace this scene with boy's 3d scene and delete boyAsSphereSCNNode
+
         let boyAsSphereSCNNode = SphereSCNNode(color: .blue) as SCNNode
+
+        let scene = SCNScene()
+        scene.rootNode.addChildNode(boyAsSphereSCNNode)
 
         mazeModel.boyPosition = mazeModel.floor!.randomElement()!
         mazeModel.boyPositionIndex = mazeModel.floor!.firstIndex(of: mazeModel.boyPosition!)
 
         mazeModel.boyAsSphereSKNode = SphereSKNode(
             brickWidth: mazeModel.brickWidth,
-            sphereSCNNode: boyAsSphereSCNNode,
+            sphereSCNScene: scene,
             position: mazeModel.boyPosition!
         ) as SKNode
 
@@ -91,7 +96,12 @@ class MazeScene: SKScene {
     }
 
     private func buildMomInScene() {
+        // FIXME: Replace this scene with mother's 3d scene and delete momAsSphereSCNNode
+
         let momAsSphereSCNNode = SphereSCNNode(color: .red) as SCNNode
+
+        let scene = SCNScene()
+        scene.rootNode.addChildNode(momAsSphereSCNNode)
 
         mazeModel.momPosition = getRandomProportionPosition(
             boyPositionIndex: mazeModel.boyPositionIndex!,
@@ -100,7 +110,7 @@ class MazeScene: SKScene {
 
         mazeModel.momAsSphereSKNode = SphereSKNode(
             brickWidth: mazeModel.brickWidth,
-            sphereSCNNode: momAsSphereSCNNode,
+            sphereSCNScene: scene,
             position: mazeModel.momPosition!
         ) as SKNode
 
@@ -108,7 +118,12 @@ class MazeScene: SKScene {
     }
 
     private func buildDollInScene() {
-        let dollAsSphereSCNNode = SphereSCNNode(color: .white) as SCNNode
+        // FIXME: Replace this scene with doll's 3d scene and delete dollAsSphereSCNNode
+
+        let dollAsSphereSCNNode = SphereSCNNode(color: .magenta) as SCNNode
+
+        let scene = SCNScene()
+        scene.rootNode.addChildNode(dollAsSphereSCNNode)
 
         mazeModel.dollPosition = getRandomProportionPosition(
             boyPositionIndex: mazeModel.boyPositionIndex!,
@@ -116,7 +131,7 @@ class MazeScene: SKScene {
 
         mazeModel.dollAsSphereSKNode = SphereSKNode(
             brickWidth: mazeModel.brickWidth,
-            sphereSCNNode: dollAsSphereSCNNode,
+            sphereSCNScene: scene,
             position: mazeModel.dollPosition!
         ) as SKNode
 
@@ -150,14 +165,6 @@ class MazeScene: SKScene {
         return sublist.randomElement()!
     }
 
-    private func buildBackgroundScene() {
-
-        let background = SKSpriteNode(imageNamed: "floor")
-        background.position = CGPoint(x: size.width, y: size.height)
-        background.zPosition = -1
-        addChild(background)
-    }
-
     private func showWinner() {
 
         let alert = UIAlertController(
@@ -169,8 +176,20 @@ class MazeScene: SKScene {
             self.removeAllNodes()
             if self.mazeModel.brickWidth >= 15 {
                 self.mazeModel.brickWidth -= 5
+                self.buildSceneNodes()
+            } else {
+                let alert = UIAlertController(
+                    title: "Parabéns!",
+                    message: "Você Finalizou o jogo",
+                    preferredStyle: .alert
+                )
+                let action = UIAlertAction(title: "OK", style: .default) {(_) in
+                    print("Fim de jogo")
+                }
+                alert.addAction(action)
+                self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                return
             }
-            self.buildSceneNodes()
         }
         alert.addAction(newGameAction)
         self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)

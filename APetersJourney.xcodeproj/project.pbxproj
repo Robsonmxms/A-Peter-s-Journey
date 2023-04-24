@@ -20,6 +20,8 @@
 		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		4C7EE90A29E43778009C0A0B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EE90929E43778009C0A0B /* InitialView.swift */; };
+		FE1B0F2929F6ADFC007B34A4 /* boy.dae in Resources */ = {isa = PBXBuildFile; fileRef = FE1B0F2829F6ADFC007B34A4 /* boy.dae */; };
+		FE1B0F2B29F6AE08007B34A4 /* doll.dae in Resources */ = {isa = PBXBuildFile; fileRef = FE1B0F2A29F6AE08007B34A4 /* doll.dae */; };
 		FE47713229E5788400764380 /* MazeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713129E5788400764380 /* MazeModel.swift */; };
 		FE47713629E583CD00764380 /* SKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713529E583CD00764380 /* SKScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
@@ -50,6 +52,8 @@
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
 		4C7EE90929E43778009C0A0B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		FE1B0F2829F6ADFC007B34A4 /* boy.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy.dae; sourceTree = "<group>"; };
+		FE1B0F2A29F6AE08007B34A4 /* doll.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = doll.dae; sourceTree = "<group>"; };
 		FE47713129E5788400764380 /* MazeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeModel.swift; sourceTree = "<group>"; };
 		FE47713529E583CD00764380 /* SKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,15 @@
 				1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */,
 			);
 			path = APetersJourneyTests;
+			sourceTree = "<group>";
+		};
+		FE1B0F2729F6ADB6007B34A4 /* Objects3D */ = {
+			isa = PBXGroup;
+			children = (
+				FE1B0F2829F6ADFC007B34A4 /* boy.dae */,
+				FE1B0F2A29F6AE08007B34A4 /* doll.dae */,
+			);
+			path = Objects3D;
 			sourceTree = "<group>";
 		};
 		FE47713029E5786200764380 /* Model */ = {
@@ -133,6 +146,7 @@
 		FED8A9CB29D5A90200457F14 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B0F2729F6ADB6007B34A4 /* Objects3D */,
 				FED8A9C129D5A82F00457F14 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -304,8 +318,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1B0F2929F6ADFC007B34A4 /* boy.dae in Resources */,
 				FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */,
 				FED8A9C529D5A82F00457F14 /* LaunchScreen.storyboard in Resources */,
+				FE1B0F2B29F6AE08007B34A4 /* doll.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
