@@ -174,7 +174,7 @@ class MazeScene: SKScene {
         )
         let newGameAction = UIAlertAction(title: "Novo Jogo", style: .default) { _ in
             self.removeAllNodes()
-            if self.mazeModel.brickWidth >= 15 {
+            if self.mazeModel.brickWidth >= 25 {
                 self.mazeModel.brickWidth -= 5
                 self.buildSceneNodes()
             } else {

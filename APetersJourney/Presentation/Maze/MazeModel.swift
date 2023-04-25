@@ -8,7 +8,7 @@
 import SpriteKit
 
 struct MazeModel {
-    var brickWidth: CGFloat = 30
+    var brickWidth: CGFloat = 40
 
     var floor: [CGPoint]?
     var wallBricksAsNodes: [SKSpriteNode]?
