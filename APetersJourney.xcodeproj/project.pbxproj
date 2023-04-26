@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		1434F5D929DAFB5B00188C8F /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9D729D5AD7F00457F14 /* Maze.swift */; };
 		1434F5DA29DAFB5B00188C8F /* Circle3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B0E29D70E7100DFB563 /* Circle3D.swift */; };
-		1434F5DB29DAFB5B00188C8F /* SphereSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */; };
+		1434F5DB29DAFB5B00188C8F /* Object3dSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* Object3dSKNode.swift */; };
 		1434F5DC29DAFB5B00188C8F /* CircleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9D529D5AD2F00457F14 /* CircleNode.swift */; };
 		1434F5DF29DAFFFC00188C8F /* MazeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F5DE29DAFFFC00188C8F /* MazeTest.swift */; };
 		1434F5E129DB10FE00188C8F /* Circle3DTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F5E029DB10FE00188C8F /* Circle3DTest.swift */; };
 		1434F5E329DB16A800188C8F /* SphereSKNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */; };
 		146B2B0F29D70E7100DFB563 /* Circle3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B0E29D70E7100DFB563 /* Circle3D.swift */; };
-		146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */; };
+		146B2B1129D70EBE00DFB563 /* Object3dSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1029D70EBE00DFB563 /* Object3dSKNode.swift */; };
 		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		4C7EE90A29E43778009C0A0B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EE90929E43778009C0A0B /* InitialView.swift */; };
 		4C9BB8B229F7FF4E00D20FC0 /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B129F7FF4E00D20FC0 /* InitialScene.swift */; };
 		4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B329F8004100D20FC0 /* GameBoard.swift */; };
-		FE1B0F2929F6ADFC007B34A4 /* boy.dae in Resources */ = {isa = PBXBuildFile; fileRef = FE1B0F2829F6ADFC007B34A4 /* boy.dae */; };
-		FE1B0F2B29F6AE08007B34A4 /* doll.dae in Resources */ = {isa = PBXBuildFile; fileRef = FE1B0F2A29F6AE08007B34A4 /* doll.dae */; };
+		D4649DBD29F9429D005D0AC1 /* doll_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB829F9429D005D0AC1 /* doll_eyes.png */; };
+		D4649DBE29F9429D005D0AC1 /* doll_skin.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB929F9429D005D0AC1 /* doll_skin.png */; };
+		D4649DBF29F9429D005D0AC1 /* doll_hair.001.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DBA29F9429D005D0AC1 /* doll_hair.001.png */; };
+		D4649DC029F9429D005D0AC1 /* doll_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DBB29F9429D005D0AC1 /* doll_hair.png */; };
+		D4649DC129F9429D005D0AC1 /* doll.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4649DBC29F9429D005D0AC1 /* doll.dae */; };
+		D4649DC329F942A5005D0AC1 /* doll.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC229F942A5005D0AC1 /* doll.scn */; };
+		D4649DCA29F943A0005D0AC1 /* motherdress.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC429F943A0005D0AC1 /* motherdress.png */; };
+		D4649DCB29F943A0005D0AC1 /* mother_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC529F943A0005D0AC1 /* mother_eyes.png */; };
+		D4649DCC29F943A0005D0AC1 /* mother_nose.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC629F943A0005D0AC1 /* mother_nose.png */; };
+		D4649DCD29F943A0005D0AC1 /* mother_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC729F943A0005D0AC1 /* mother_hair.png */; };
+		D4649DCE29F943A0005D0AC1 /* mother_skin.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC829F943A0005D0AC1 /* mother_skin.png */; };
+		D4649DCF29F943A0005D0AC1 /* mother.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC929F943A0005D0AC1 /* mother.dae */; };
+		D4649DD829F943AB005D0AC1 /* dolleyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD029F943AB005D0AC1 /* dolleyes.png */; };
+		D4649DD929F943AB005D0AC1 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD129F943AB005D0AC1 /* head.png */; };
+		D4649DDA29F943AB005D0AC1 /* pants.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD229F943AB005D0AC1 /* pants.png */; };
+		D4649DDB29F943AB005D0AC1 /* hair.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD329F943AB005D0AC1 /* hair.png */; };
+		D4649DDC29F943AB005D0AC1 /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD429F943AB005D0AC1 /* body.png */; };
+		D4649DDD29F943AB005D0AC1 /* eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD529F943AB005D0AC1 /* eyes.png */; };
+		D4649DDE29F943AB005D0AC1 /* nose.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD629F943AB005D0AC1 /* nose.png */; };
+		D4649DDF29F943AB005D0AC1 /* boy.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD729F943AB005D0AC1 /* boy.dae */; };
+		D4649DE129F943B2005D0AC1 /* boy.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4649DE029F943B2005D0AC1 /* boy.scn */; };
+		D4649DE329F943B7005D0AC1 /* mother.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4649DE229F943B7005D0AC1 /* mother.scn */; };
 		FE47713229E5788400764380 /* MazeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713129E5788400764380 /* MazeModel.swift */; };
 		FE47713629E583CD00764380 /* SKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713529E583CD00764380 /* SKScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
@@ -49,15 +69,35 @@
 		1434F5E029DB10FE00188C8F /* Circle3DTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle3DTest.swift; sourceTree = "<group>"; };
 		1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereSKNodeTest.swift; sourceTree = "<group>"; };
 		146B2B0E29D70E7100DFB563 /* Circle3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle3D.swift; sourceTree = "<group>"; };
-		146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereSKNode.swift; sourceTree = "<group>"; };
+		146B2B1029D70EBE00DFB563 /* Object3dSKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object3dSKNode.swift; sourceTree = "<group>"; };
 		146B2B1229D7136D00DFB563 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
 		4C7EE90929E43778009C0A0B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		4C9BB8B129F7FF4E00D20FC0 /* InitialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
 		4C9BB8B329F8004100D20FC0 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
-		FE1B0F2829F6ADFC007B34A4 /* boy.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy.dae; sourceTree = "<group>"; };
-		FE1B0F2A29F6AE08007B34A4 /* doll.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = doll.dae; sourceTree = "<group>"; };
+		D4649DB829F9429D005D0AC1 /* doll_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_eyes.png; sourceTree = "<group>"; };
+		D4649DB929F9429D005D0AC1 /* doll_skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_skin.png; sourceTree = "<group>"; };
+		D4649DBA29F9429D005D0AC1 /* doll_hair.001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_hair.001.png; sourceTree = "<group>"; };
+		D4649DBB29F9429D005D0AC1 /* doll_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_hair.png; sourceTree = "<group>"; };
+		D4649DBC29F9429D005D0AC1 /* doll.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = doll.dae; sourceTree = "<group>"; };
+		D4649DC229F942A5005D0AC1 /* doll.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = doll.scn; sourceTree = "<group>"; };
+		D4649DC429F943A0005D0AC1 /* motherdress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motherdress.png; sourceTree = "<group>"; };
+		D4649DC529F943A0005D0AC1 /* mother_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_eyes.png; sourceTree = "<group>"; };
+		D4649DC629F943A0005D0AC1 /* mother_nose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_nose.png; sourceTree = "<group>"; };
+		D4649DC729F943A0005D0AC1 /* mother_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_hair.png; sourceTree = "<group>"; };
+		D4649DC829F943A0005D0AC1 /* mother_skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_skin.png; sourceTree = "<group>"; };
+		D4649DC929F943A0005D0AC1 /* mother.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = mother.dae; sourceTree = "<group>"; };
+		D4649DD029F943AB005D0AC1 /* dolleyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dolleyes.png; sourceTree = "<group>"; };
+		D4649DD129F943AB005D0AC1 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		D4649DD229F943AB005D0AC1 /* pants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pants.png; sourceTree = "<group>"; };
+		D4649DD329F943AB005D0AC1 /* hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair.png; sourceTree = "<group>"; };
+		D4649DD429F943AB005D0AC1 /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body.png; sourceTree = "<group>"; };
+		D4649DD529F943AB005D0AC1 /* eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyes.png; sourceTree = "<group>"; };
+		D4649DD629F943AB005D0AC1 /* nose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nose.png; sourceTree = "<group>"; };
+		D4649DD729F943AB005D0AC1 /* boy.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy.dae; sourceTree = "<group>"; };
+		D4649DE029F943B2005D0AC1 /* boy.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = boy.scn; sourceTree = "<group>"; };
+		D4649DE229F943B7005D0AC1 /* mother.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mother.scn; sourceTree = "<group>"; };
 		FE47713129E5788400764380 /* MazeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeModel.swift; sourceTree = "<group>"; };
 		FE47713529E583CD00764380 /* SKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,11 +131,55 @@
 			path = APetersJourneyTests;
 			sourceTree = "<group>";
 		};
+		D4649D6529F8BD3B005D0AC1 /* 3DDoll */ = {
+			isa = PBXGroup;
+			children = (
+				D4649DB829F9429D005D0AC1 /* doll_eyes.png */,
+				D4649DBA29F9429D005D0AC1 /* doll_hair.001.png */,
+				D4649DBB29F9429D005D0AC1 /* doll_hair.png */,
+				D4649DB929F9429D005D0AC1 /* doll_skin.png */,
+				D4649DBC29F9429D005D0AC1 /* doll.dae */,
+				D4649DC229F942A5005D0AC1 /* doll.scn */,
+			);
+			path = 3DDoll;
+			sourceTree = "<group>";
+		};
+		D4649D9229F8C544005D0AC1 /* 3DBoy */ = {
+			isa = PBXGroup;
+			children = (
+				D4649DD429F943AB005D0AC1 /* body.png */,
+				D4649DD729F943AB005D0AC1 /* boy.dae */,
+				D4649DE029F943B2005D0AC1 /* boy.scn */,
+				D4649DD029F943AB005D0AC1 /* dolleyes.png */,
+				D4649DD529F943AB005D0AC1 /* eyes.png */,
+				D4649DD329F943AB005D0AC1 /* hair.png */,
+				D4649DD129F943AB005D0AC1 /* head.png */,
+				D4649DD629F943AB005D0AC1 /* nose.png */,
+				D4649DD229F943AB005D0AC1 /* pants.png */,
+			);
+			path = 3DBoy;
+			sourceTree = "<group>";
+		};
+		D4649D9329F8C551005D0AC1 /* 3DMother */ = {
+			isa = PBXGroup;
+			children = (
+				D4649DC529F943A0005D0AC1 /* mother_eyes.png */,
+				D4649DC729F943A0005D0AC1 /* mother_hair.png */,
+				D4649DC629F943A0005D0AC1 /* mother_nose.png */,
+				D4649DC829F943A0005D0AC1 /* mother_skin.png */,
+				D4649DC929F943A0005D0AC1 /* mother.dae */,
+				D4649DE229F943B7005D0AC1 /* mother.scn */,
+				D4649DC429F943A0005D0AC1 /* motherdress.png */,
+			);
+			path = 3DMother;
+			sourceTree = "<group>";
+		};
 		FE1B0F2729F6ADB6007B34A4 /* Objects3D */ = {
 			isa = PBXGroup;
 			children = (
-				FE1B0F2829F6ADFC007B34A4 /* boy.dae */,
-				FE1B0F2A29F6AE08007B34A4 /* doll.dae */,
+				D4649D9329F8C551005D0AC1 /* 3DMother */,
+				D4649D9229F8C544005D0AC1 /* 3DBoy */,
+				D4649D6529F8BD3B005D0AC1 /* 3DDoll */,
 			);
 			path = Objects3D;
 			sourceTree = "<group>";
@@ -195,7 +279,7 @@
 				FED8A9D529D5AD2F00457F14 /* CircleNode.swift */,
 				FED8A9D729D5AD7F00457F14 /* Maze.swift */,
 				146B2B0E29D70E7100DFB563 /* Circle3D.swift */,
-				146B2B1029D70EBE00DFB563 /* SphereSKNode.swift */,
+				146B2B1029D70EBE00DFB563 /* Object3dSKNode.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -324,10 +408,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1B0F2929F6ADFC007B34A4 /* boy.dae in Resources */,
+				D4649DC029F9429D005D0AC1 /* doll_hair.png in Resources */,
+				D4649DDD29F943AB005D0AC1 /* eyes.png in Resources */,
+				D4649DCE29F943A0005D0AC1 /* mother_skin.png in Resources */,
+				D4649DE329F943B7005D0AC1 /* mother.scn in Resources */,
+				D4649DBF29F9429D005D0AC1 /* doll_hair.001.png in Resources */,
+				D4649DBD29F9429D005D0AC1 /* doll_eyes.png in Resources */,
+				D4649DCC29F943A0005D0AC1 /* mother_nose.png in Resources */,
 				FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */,
+				D4649DCB29F943A0005D0AC1 /* mother_eyes.png in Resources */,
+				D4649DCA29F943A0005D0AC1 /* motherdress.png in Resources */,
+				D4649DC329F942A5005D0AC1 /* doll.scn in Resources */,
+				D4649DDA29F943AB005D0AC1 /* pants.png in Resources */,
+				D4649DCD29F943A0005D0AC1 /* mother_hair.png in Resources */,
+				D4649DDB29F943AB005D0AC1 /* hair.png in Resources */,
+				D4649DDC29F943AB005D0AC1 /* body.png in Resources */,
+				D4649DDE29F943AB005D0AC1 /* nose.png in Resources */,
+				D4649DDF29F943AB005D0AC1 /* boy.dae in Resources */,
+				D4649DD829F943AB005D0AC1 /* dolleyes.png in Resources */,
+				D4649DC129F9429D005D0AC1 /* doll.dae in Resources */,
+				D4649DE129F943B2005D0AC1 /* boy.scn in Resources */,
 				FED8A9C529D5A82F00457F14 /* LaunchScreen.storyboard in Resources */,
-				FE1B0F2B29F6AE08007B34A4 /* doll.dae in Resources */,
+				D4649DD929F943AB005D0AC1 /* head.png in Resources */,
+				D4649DBE29F9429D005D0AC1 /* doll_skin.png in Resources */,
+				D4649DCF29F943A0005D0AC1 /* mother.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1434F5DB29DAFB5B00188C8F /* SphereSKNode.swift in Sources */,
+				1434F5DB29DAFB5B00188C8F /* Object3dSKNode.swift in Sources */,
 				146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */,
 				146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */,
 				1434F5DC29DAFB5B00188C8F /* CircleNode.swift in Sources */,
@@ -385,7 +489,7 @@
 				FED8A9D629D5AD2F00457F14 /* CircleNode.swift in Sources */,
 				146B2B0F29D70E7100DFB563 /* Circle3D.swift in Sources */,
 				FED8A9D829D5AD7F00457F14 /* Maze.swift in Sources */,
-				146B2B1129D70EBE00DFB563 /* SphereSKNode.swift in Sources */,
+				146B2B1129D70EBE00DFB563 /* Object3dSKNode.swift in Sources */,
 				FE47713229E5788400764380 /* MazeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 37U5X9NN8C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -601,7 +705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 37U5X9NN8C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

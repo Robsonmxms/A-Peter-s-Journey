@@ -76,19 +76,15 @@ class MazeScene: SKScene {
     }
 
     private func buildBoyInScene() {
-        // FIXME: Replace this scene with boy's 3d scene and delete boyAsSphereSCNNode
 
-        let boyAsSphereSCNNode = SphereSCNNode(color: .blue) as SCNNode
-
-        let scene = SCNScene()
-        scene.rootNode.addChildNode(boyAsSphereSCNNode)
+        let scene = SCNScene(named: "boy.scn")
 
         mazeModel.boyPosition = mazeModel.floor!.randomElement()!
         mazeModel.boyPositionIndex = mazeModel.floor!.firstIndex(of: mazeModel.boyPosition!)
 
-        mazeModel.boyAsSphereSKNode = SphereSKNode(
+        mazeModel.boyAsSphereSKNode = Object3dSKNode(
             brickWidth: mazeModel.brickWidth,
-            sphereSCNScene: scene,
+            sphereSCNScene: scene!,
             position: mazeModel.boyPosition!
         ) as SKNode
 
@@ -96,21 +92,17 @@ class MazeScene: SKScene {
     }
 
     private func buildMomInScene() {
-        // FIXME: Replace this scene with mother's 3d scene and delete momAsSphereSCNNode
 
-        let momAsSphereSCNNode = SphereSCNNode(color: .red) as SCNNode
-
-        let scene = SCNScene()
-        scene.rootNode.addChildNode(momAsSphereSCNNode)
+        let scene = SCNScene(named: "mother.scn")
 
         mazeModel.momPosition = getRandomProportionPosition(
             boyPositionIndex: mazeModel.boyPositionIndex!,
             proportion: 0.6
         )
 
-        mazeModel.momAsSphereSKNode = SphereSKNode(
+        mazeModel.momAsSphereSKNode = Object3dSKNode(
             brickWidth: mazeModel.brickWidth,
-            sphereSCNScene: scene,
+            sphereSCNScene: scene!,
             position: mazeModel.momPosition!
         ) as SKNode
 
@@ -118,20 +110,16 @@ class MazeScene: SKScene {
     }
 
     private func buildDollInScene() {
-        // FIXME: Replace this scene with doll's 3d scene and delete dollAsSphereSCNNode
 
-        let dollAsSphereSCNNode = SphereSCNNode(color: .magenta) as SCNNode
-
-        let scene = SCNScene()
-        scene.rootNode.addChildNode(dollAsSphereSCNNode)
+        let scene = SCNScene(named: "doll.scn")
 
         mazeModel.dollPosition = getRandomProportionPosition(
             boyPositionIndex: mazeModel.boyPositionIndex!,
             proportion: 0.8)
 
-        mazeModel.dollAsSphereSKNode = SphereSKNode(
+        mazeModel.dollAsSphereSKNode = Object3dSKNode(
             brickWidth: mazeModel.brickWidth,
-            sphereSCNScene: scene,
+            sphereSCNScene: scene!,
             position: mazeModel.dollPosition!
         ) as SKNode
 
@@ -201,16 +189,16 @@ class MazeScene: SKScene {
            let gravityY = manager?.deviceMotion?.gravity.x {
 
             mazeModel.boyAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
-                dx: CGFloat(-gravityX)*150,
-                dy: CGFloat(gravityY)*150)
+                dx: CGFloat(-gravityX)*100,
+                dy: CGFloat(gravityY)*100)
             )
             mazeModel.momAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
-                dx: CGFloat(-gravityX)*150,
-                dy: CGFloat(gravityY)*150)
+                dx: CGFloat(-gravityX)*100,
+                dy: CGFloat(gravityY)*100)
             )
             mazeModel.dollAsSphereSKNode.physicsBody?.applyImpulse(CGVector(
-                dx: CGFloat(-gravityX)*150,
-                dy: CGFloat(gravityY)*150)
+                dx: CGFloat(-gravityX)*100,
+                dy: CGFloat(gravityY)*100)
             )
         }
     }
