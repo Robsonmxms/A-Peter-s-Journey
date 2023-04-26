@@ -10,7 +10,7 @@ import SpriteKit
 
 struct GameBoard: View {
     var scene: SKScene {
-        let scene = InitialScene()
+        let scene = MenuScene()
         scene.scaleMode = .resizeFill
         return scene
     }
