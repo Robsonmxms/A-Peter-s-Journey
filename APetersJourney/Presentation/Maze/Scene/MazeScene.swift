@@ -246,7 +246,7 @@ extension MazeScene: SKPhysicsContactDelegate {
         if  isMomCatchingBoy || isBoyCatchingMom {
             let alert = UIAlertController(title: "Mamãe te pegou", message: "Perdeu", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default) {(_) in
-                self.reloadSpawnPoints()
+                self.goBack()
             }
             alert.addAction(action)
             self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)

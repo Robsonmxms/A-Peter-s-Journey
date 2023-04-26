@@ -17,11 +17,28 @@ class MenuScene: SKScene {
         return background
     }()
 
-    private lazy var button: SKLabelNode = {
-        let label = SKLabelNode(text: "Play")
-        label.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+    private lazy var title: SKLabelNode = {
+        let label = SKLabelNode(fontNamed: "Noteworthy")
+        label.text = "A Peter's Journey"
+        label.position = CGPoint(x: size.width*0.6, y: size.height*0.7)
         label.fontColor = UIColor.white
-        label.fontSize = 100
+        label.fontSize = size.width*0.1
+        return label
+    }()
+
+    private lazy var button: SKLabelNode = {
+        let label = SKLabelNode(fontNamed: "Apple-Chancery")
+        label.text = "Play"
+        label.position = CGPoint(x: size.width*0.65, y: size.height*0.2)
+        label.fontColor = UIColor.white
+        label.fontSize = size.width*0.1
+
+        let pulseUp = SKAction.scale(to: 1.1, duration: 0.5)
+        let pulseDown = SKAction.scale(to: 1.0, duration: 0.5)
+        let pulse = SKAction.sequence([pulseUp, pulseDown])
+
+        let repeatPulse = SKAction.repeatForever(pulse)
+        label.run(repeatPulse)
         return label
     }()
 
@@ -29,6 +46,7 @@ class MenuScene: SKScene {
 
         if children.isEmpty {
             addChild(peterImage)
+            addChild(title)
             addChild(button)
             self.backgroundColor = UIColor(named: "background")!
         }
