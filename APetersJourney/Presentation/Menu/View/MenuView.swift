@@ -1,14 +1,14 @@
 //
-//  MazeView.swift
-//  A Peter's Journey
+//  MenuSceneView.swift
+//  APetersJourney
 //
-//  Created by Robson Lima Lopes on 30/03/23.
+//  Created by Marcelo De Araújo on 26/04/23.
 //
 
 import SwiftUI
 import SpriteKit
 
-struct MazeViewRepresentable: UIViewRepresentable {
+struct MenuViewRepresentable: UIViewRepresentable {
 
     func makeUIView(context: Context) -> SKView {
         let view = SKView()
@@ -26,8 +26,8 @@ struct MazeViewRepresentable: UIViewRepresentable {
     }
 }
 
-struct MazeView: View {
+struct MenuView: View {
     var body: some View {
-        MazeViewRepresentable().ignoresSafeArea()
+        MenuViewRepresentable().ignoresSafeArea()
     }
 }

@@ -11,15 +11,15 @@ struct OnboardingView: View {
     @State var destination: Bool = false
 
     var body: some View {
-        ZStack{
+        ZStack {
             ScrollView {
                 VStack {
                     VStack {
-                        Text("Bem vindo ao A Peter's Journey")
+                        Text("Bem vindo ao A Peter's Journey!")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .padding(.vertical, 5)
-                        Text("Capture a boneca com o menino mas cuidado para mamãe não ti pegar 😅")
+                        Text("Capture a boneca com o menino, mas cuidado para mamãe não te pegar 😅")
                             .font(.title2)
                             .padding(.horizontal, 5)
                     }
@@ -62,7 +62,7 @@ struct OnboardingView: View {
                 .buttonStyle(.borderedProminent)
                 .contentShape(Rectangle())
                 .navigationDestination(isPresented: $destination) {
-                    MenuSceneView()
+                    MenuView()
                         .navigationBarBackButtonHidden()
                 }
                 .padding()

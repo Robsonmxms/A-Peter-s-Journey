@@ -11,6 +11,8 @@ class MenuScene: SKScene {
 
     private lazy var peterImage: SKSpriteNode = {
         let background = SKSpriteNode(imageNamed: "menuBackground")
+        print(frame.width)
+        print(UIScreen.main.bounds.width)
         background.position = CGPoint(x: size.width/5, y: size.width/4)
         background.size = CGSize(width: frame.width/2, height: frame.width/2)
         background.zPosition = 0
