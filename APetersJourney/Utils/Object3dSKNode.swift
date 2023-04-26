@@ -8,8 +8,7 @@
 import SpriteKit
 import SceneKit
 
-// TODO: After inserting all 3d objects scenes, rename SphereSKNode to Object3dSKNode
-class SphereSKNode: SKNode {
+class Object3dSKNode: SKNode {
     init(
         brickWidth: CGFloat,
         sphereSCNScene: SCNScene,
