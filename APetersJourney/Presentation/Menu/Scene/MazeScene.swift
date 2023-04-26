@@ -160,7 +160,7 @@ class MazeScene: SKScene {
             message: "Parabéns!",
             preferredStyle: .alert
         )
-        let newGameAction = UIAlertAction(title: "Novo Jogo", style: .default) { _ in
+        let newGameAction = UIAlertAction(title: "Próxima Fase", style: .default) { _ in
             self.removeAllNodes()
             if self.mazeModel.brickWidth >= 25 {
                 self.mazeModel.brickWidth -= 5
@@ -217,6 +217,7 @@ class MazeScene: SKScene {
 extension MazeScene: SKPhysicsContactDelegate {
 
     func didBegin(_ contact: SKPhysicsContact) {
+
         let bodyA = contact.bodyA.node
         let bodyB = contact.bodyB.node
 

@@ -19,8 +19,10 @@
 		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
+		14E5D16129F9674700660AA8 /* OnBoardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5D16029F9674700660AA8 /* OnBoardImage.swift */; };
+		14E5D16329F9685100660AA8 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5D16229F9685100660AA8 /* OnBoardView.swift */; };
+		14E5D16529F99BA200660AA8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5D16429F99BA200660AA8 /* MenuView.swift */; };
 		4C9BB8B229F7FF4E00D20FC0 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */; };
-		4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B329F8004100D20FC0 /* GameBoard.swift */; };
 		D4649DBD29F9429D005D0AC1 /* doll_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB829F9429D005D0AC1 /* doll_eyes.png */; };
 		D4649DBE29F9429D005D0AC1 /* doll_skin.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB929F9429D005D0AC1 /* doll_skin.png */; };
 		D4649DBF29F9429D005D0AC1 /* doll_hair.001.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DBA29F9429D005D0AC1 /* doll_hair.001.png */; };
@@ -46,7 +48,6 @@
 		FE47713229E5788400764380 /* MazeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713129E5788400764380 /* MazeModel.swift */; };
 		FE47713629E583CD00764380 /* SKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713529E583CD00764380 /* SKScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
-		FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9BC29D5A82E00457F14 /* MazeView.swift */; };
 		FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED8A9C129D5A82F00457F14 /* Assets.xcassets */; };
 		FED8A9C529D5A82F00457F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED8A9C329D5A82F00457F14 /* LaunchScreen.storyboard */; };
 		FED8A9D629D5AD2F00457F14 /* CircleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9D529D5AD2F00457F14 /* CircleNode.swift */; };
@@ -72,8 +73,10 @@
 		146B2B1229D7136D00DFB563 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
+		14E5D16029F9674700660AA8 /* OnBoardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardImage.swift; sourceTree = "<group>"; };
+		14E5D16229F9685100660AA8 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
+		14E5D16429F99BA200660AA8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
-		4C9BB8B329F8004100D20FC0 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		D4649DB829F9429D005D0AC1 /* doll_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_eyes.png; sourceTree = "<group>"; };
 		D4649DB929F9429D005D0AC1 /* doll_skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_skin.png; sourceTree = "<group>"; };
 		D4649DBA29F9429D005D0AC1 /* doll_hair.001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_hair.001.png; sourceTree = "<group>"; };
@@ -100,7 +103,6 @@
 		FE47713529E583CD00764380 /* SKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeterJourneyApp.swift; sourceTree = "<group>"; };
-		FED8A9BC29D5A82E00457F14 /* MazeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeView.swift; sourceTree = "<group>"; };
 		FED8A9C129D5A82F00457F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FED8A9C429D5A82F00457F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FED8A9D529D5AD2F00457F14 /* CircleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNode.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */,
 			);
 			path = APetersJourneyTests;
+			sourceTree = "<group>";
+		};
+		14E5D15F29F9670500660AA8 /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				FE1B0F2E29F9B649007B34A4 /* View */,
+			);
+			path = OnBoard;
 			sourceTree = "<group>";
 		};
 		D4649D6529F8BD3B005D0AC1 /* 3DDoll */ = {
@@ -180,6 +190,23 @@
 				D4649D6529F8BD3B005D0AC1 /* 3DDoll */,
 			);
 			path = Objects3D;
+			sourceTree = "<group>";
+		};
+		FE1B0F2E29F9B649007B34A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE1B0F2F29F9B657007B34A4 /* Components */,
+				14E5D16229F9685100660AA8 /* OnBoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE1B0F2F29F9B657007B34A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				14E5D16029F9674700660AA8 /* OnBoardImage.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FE47713029E5786200764380 /* Model */ = {
@@ -241,7 +268,6 @@
 			children = (
 				FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */,
 				FED8A9C329D5A82F00457F14 /* LaunchScreen.storyboard */,
-				4C9BB8B329F8004100D20FC0 /* GameBoard.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -249,7 +275,8 @@
 		FED8A9CD29D5A91F00457F14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FED8A9D129D5A9DB00457F14 /* Maze */,
+				14E5D15F29F9670500660AA8 /* OnBoard */,
+				FED8A9D129D5A9DB00457F14 /* Menu */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -266,15 +293,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		FED8A9D129D5A9DB00457F14 /* Maze */ = {
+		FED8A9D129D5A9DB00457F14 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				FE47713029E5786200764380 /* Model */,
 				FED8A9D429D5A9F200457F14 /* View */,
-				FED8A9D329D5A9EC00457F14 /* Controller */,
 				FED8A9D229D5A9E400457F14 /* Scene */,
 			);
-			path = Maze;
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		FED8A9D229D5A9E400457F14 /* Scene */ = {
@@ -286,17 +312,10 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		FED8A9D329D5A9EC00457F14 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		FED8A9D429D5A9F200457F14 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FED8A9BC29D5A82E00457F14 /* MazeView.swift */,
+				14E5D16429F99BA200660AA8 /* MenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,9 +480,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9BB8B229F7FF4E00D20FC0 /* MenuScene.swift in Sources */,
-				FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */,
+				14E5D16129F9674700660AA8 /* OnBoardImage.swift in Sources */,
+				14E5D16529F99BA200660AA8 /* MenuView.swift in Sources */,
+				14E5D16329F9685100660AA8 /* OnBoardView.swift in Sources */,
 				FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */,
-				4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */,
 				146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */,
 				FE47713629E583CD00764380 /* SKScene.swift in Sources */,
 				FED8A9D629D5AD2F00457F14 /* CircleNode.swift in Sources */,
@@ -685,7 +705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

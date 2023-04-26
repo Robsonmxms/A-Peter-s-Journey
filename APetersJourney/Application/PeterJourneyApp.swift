@@ -11,9 +11,10 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MazeView()
-            }.navigationViewStyle(StackNavigationViewStyle())
+            NavigationStack {
+                OnboardingView()
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
 
         }
     }

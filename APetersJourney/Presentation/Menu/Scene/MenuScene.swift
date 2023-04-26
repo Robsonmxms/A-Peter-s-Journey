@@ -11,6 +11,8 @@ class MenuScene: SKScene {
 
     private lazy var peterImage: SKSpriteNode = {
         let background = SKSpriteNode(imageNamed: "menuBackground")
+        print(frame.width)
+        print(UIScreen.main.bounds.width)
         background.position = CGPoint(x: size.width/5, y: size.width/4)
         background.size = CGSize(width: frame.width/2, height: frame.width/2)
         background.zPosition = 0
@@ -43,10 +45,13 @@ class MenuScene: SKScene {
     }()
 
     override func didMove(to view: SKView) {
-        addChild(peterImage)
-        addChild(title)
-        addChild(button)
-        self.backgroundColor = UIColor(named: "background")!
+
+        if children.isEmpty {
+            addChild(peterImage)
+            addChild(title)
+            addChild(button)
+            self.backgroundColor = UIColor(named: "background")!
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
