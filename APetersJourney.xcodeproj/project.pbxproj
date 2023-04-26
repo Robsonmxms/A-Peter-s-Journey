@@ -19,8 +19,7 @@
 		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
-		4C7EE90A29E43778009C0A0B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EE90929E43778009C0A0B /* InitialView.swift */; };
-		4C9BB8B229F7FF4E00D20FC0 /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B129F7FF4E00D20FC0 /* InitialScene.swift */; };
+		4C9BB8B229F7FF4E00D20FC0 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */; };
 		4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B329F8004100D20FC0 /* GameBoard.swift */; };
 		D4649DBD29F9429D005D0AC1 /* doll_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB829F9429D005D0AC1 /* doll_eyes.png */; };
 		D4649DBE29F9429D005D0AC1 /* doll_skin.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB929F9429D005D0AC1 /* doll_skin.png */; };
@@ -73,8 +72,7 @@
 		146B2B1229D7136D00DFB563 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
-		4C7EE90929E43778009C0A0B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
-		4C9BB8B129F7FF4E00D20FC0 /* InitialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
+		4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		4C9BB8B329F8004100D20FC0 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		D4649DB829F9429D005D0AC1 /* doll_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_eyes.png; sourceTree = "<group>"; };
 		D4649DB929F9429D005D0AC1 /* doll_skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_skin.png; sourceTree = "<group>"; };
@@ -224,8 +222,6 @@
 				FED8A9CB29D5A90200457F14 /* Resources */,
 				FED8A9CC29D5A91400457F14 /* Application */,
 				FED8A9CD29D5A91F00457F14 /* Presentation */,
-				FED8A9CE29D5A92900457F14 /* Data */,
-				FED8A9CF29D5A93300457F14 /* Domain */,
 				FED8A9D029D5A93A00457F14 /* Utils */,
 			);
 			path = APetersJourney;
@@ -258,20 +254,6 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		FED8A9CE29D5A92900457F14 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		FED8A9CF29D5A93300457F14 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		FED8A9D029D5A93A00457F14 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				146B2B1229D7136D00DFB563 /* MazeScene.swift */,
-				4C9BB8B129F7FF4E00D20FC0 /* InitialScene.swift */,
+				4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -315,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				FED8A9BC29D5A82E00457F14 /* MazeView.swift */,
-				4C7EE90929E43778009C0A0B /* InitialView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,9 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C9BB8B229F7FF4E00D20FC0 /* InitialScene.swift in Sources */,
+				4C9BB8B229F7FF4E00D20FC0 /* MenuScene.swift in Sources */,
 				FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */,
-				4C7EE90A29E43778009C0A0B /* InitialView.swift in Sources */,
 				FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */,
 				4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */,
 				146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */,
@@ -673,7 +653,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37U5X9NN8C;
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -705,7 +685,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37U5X9NN8C;
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

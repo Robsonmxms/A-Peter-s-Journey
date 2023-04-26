@@ -41,7 +41,7 @@ class MazeScene: SKScene {
             userInfo: nil,
             repeats: true
         )
-        self.backgroundColor = UIColor(named: "MazeBackground")!
+        self.backgroundColor = UIColor(named: "background")!
 
         buildSceneNodes()
 
@@ -172,7 +172,7 @@ class MazeScene: SKScene {
                     preferredStyle: .alert
                 )
                 let action = UIAlertAction(title: "OK", style: .default) {(_) in
-                    print("Fim de jogo")
+                    self.goBack()
                 }
                 alert.addAction(action)
                 self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
@@ -182,6 +182,12 @@ class MazeScene: SKScene {
         alert.addAction(newGameAction)
         self.view?.window?.rootViewController?.present(alert, animated: true, completion: nil)
 
+    }
+
+    private func goBack() {
+        let transition = SKTransition.fade(withDuration: 3)
+        let nextScene = MenuScene(size: UIScreen.main.bounds.size)
+        self.view!.presentScene(nextScene, transition: transition)
     }
 
     override func update(_ currentTime: TimeInterval) {

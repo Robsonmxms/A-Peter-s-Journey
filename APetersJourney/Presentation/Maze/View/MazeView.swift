@@ -14,7 +14,7 @@ struct MazeViewRepresentable: UIViewRepresentable {
         let view = SKView()
         view.frame = UIScreen.main.bounds
 
-        let scene = InitialScene(size: view.bounds.size)
+        let scene = MenuScene(size: view.bounds.size)
         scene.scaleMode = .aspectFill
 
         view.presentScene(scene)
@@ -23,12 +23,6 @@ struct MazeViewRepresentable: UIViewRepresentable {
     }
 
     func updateUIView(_ view: SKView, context: Context) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            let transition = SKTransition.fade(withDuration: 3)
-            view.frame = UIScreen.main.bounds
-            let nextScene = MazeScene(size: view.bounds.size)
-            view.presentScene(nextScene, transition: transition)
-        }
     }
 }
 
