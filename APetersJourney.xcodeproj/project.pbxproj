@@ -27,12 +27,6 @@
 		D4649DC029F9429D005D0AC1 /* doll_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DBB29F9429D005D0AC1 /* doll_hair.png */; };
 		D4649DC129F9429D005D0AC1 /* doll.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4649DBC29F9429D005D0AC1 /* doll.dae */; };
 		D4649DC329F942A5005D0AC1 /* doll.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC229F942A5005D0AC1 /* doll.scn */; };
-		D4649DCA29F943A0005D0AC1 /* motherdress.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC429F943A0005D0AC1 /* motherdress.png */; };
-		D4649DCB29F943A0005D0AC1 /* mother_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC529F943A0005D0AC1 /* mother_eyes.png */; };
-		D4649DCC29F943A0005D0AC1 /* mother_nose.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC629F943A0005D0AC1 /* mother_nose.png */; };
-		D4649DCD29F943A0005D0AC1 /* mother_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC729F943A0005D0AC1 /* mother_hair.png */; };
-		D4649DCE29F943A0005D0AC1 /* mother_skin.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC829F943A0005D0AC1 /* mother_skin.png */; };
-		D4649DCF29F943A0005D0AC1 /* mother.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4649DC929F943A0005D0AC1 /* mother.dae */; };
 		D4649DD829F943AB005D0AC1 /* dolleyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD029F943AB005D0AC1 /* dolleyes.png */; };
 		D4649DD929F943AB005D0AC1 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD129F943AB005D0AC1 /* head.png */; };
 		D4649DDA29F943AB005D0AC1 /* pants.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD229F943AB005D0AC1 /* pants.png */; };
@@ -42,7 +36,13 @@
 		D4649DDE29F943AB005D0AC1 /* nose.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD629F943AB005D0AC1 /* nose.png */; };
 		D4649DDF29F943AB005D0AC1 /* boy.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4649DD729F943AB005D0AC1 /* boy.dae */; };
 		D4649DE129F943B2005D0AC1 /* boy.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4649DE029F943B2005D0AC1 /* boy.scn */; };
-		D4649DE329F943B7005D0AC1 /* mother.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4649DE229F943B7005D0AC1 /* mother.scn */; };
+		D4CDCBA929F965D300CD7588 /* mother.dae in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBA329F965D300CD7588 /* mother.dae */; };
+		D4CDCBAA29F965D300CD7588 /* mother_dress.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBA429F965D300CD7588 /* mother_dress.png */; };
+		D4CDCBAB29F965D300CD7588 /* mother_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBA529F965D300CD7588 /* mother_hair.png */; };
+		D4CDCBAC29F965D300CD7588 /* mother_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBA629F965D300CD7588 /* mother_eyes.png */; };
+		D4CDCBAD29F965D300CD7588 /* mother_skin.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBA729F965D300CD7588 /* mother_skin.png */; };
+		D4CDCBAE29F965D300CD7588 /* mother_nose.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBA829F965D300CD7588 /* mother_nose.png */; };
+		D4CDCBB029F965DA00CD7588 /* mother.scn in Resources */ = {isa = PBXBuildFile; fileRef = D4CDCBAF29F965DA00CD7588 /* mother.scn */; };
 		FE47713229E5788400764380 /* MazeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713129E5788400764380 /* MazeModel.swift */; };
 		FE47713629E583CD00764380 /* SKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47713529E583CD00764380 /* SKScene.swift */; };
 		FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A9B429D5A82E00457F14 /* PeterJourneyApp.swift */; };
@@ -80,12 +80,6 @@
 		D4649DBB29F9429D005D0AC1 /* doll_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_hair.png; sourceTree = "<group>"; };
 		D4649DBC29F9429D005D0AC1 /* doll.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = doll.dae; sourceTree = "<group>"; };
 		D4649DC229F942A5005D0AC1 /* doll.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = doll.scn; sourceTree = "<group>"; };
-		D4649DC429F943A0005D0AC1 /* motherdress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motherdress.png; sourceTree = "<group>"; };
-		D4649DC529F943A0005D0AC1 /* mother_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_eyes.png; sourceTree = "<group>"; };
-		D4649DC629F943A0005D0AC1 /* mother_nose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_nose.png; sourceTree = "<group>"; };
-		D4649DC729F943A0005D0AC1 /* mother_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_hair.png; sourceTree = "<group>"; };
-		D4649DC829F943A0005D0AC1 /* mother_skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_skin.png; sourceTree = "<group>"; };
-		D4649DC929F943A0005D0AC1 /* mother.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = mother.dae; sourceTree = "<group>"; };
 		D4649DD029F943AB005D0AC1 /* dolleyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dolleyes.png; sourceTree = "<group>"; };
 		D4649DD129F943AB005D0AC1 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		D4649DD229F943AB005D0AC1 /* pants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pants.png; sourceTree = "<group>"; };
@@ -95,7 +89,13 @@
 		D4649DD629F943AB005D0AC1 /* nose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nose.png; sourceTree = "<group>"; };
 		D4649DD729F943AB005D0AC1 /* boy.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy.dae; sourceTree = "<group>"; };
 		D4649DE029F943B2005D0AC1 /* boy.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = boy.scn; sourceTree = "<group>"; };
-		D4649DE229F943B7005D0AC1 /* mother.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mother.scn; sourceTree = "<group>"; };
+		D4CDCBA329F965D300CD7588 /* mother.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = mother.dae; sourceTree = "<group>"; };
+		D4CDCBA429F965D300CD7588 /* mother_dress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_dress.png; sourceTree = "<group>"; };
+		D4CDCBA529F965D300CD7588 /* mother_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_hair.png; sourceTree = "<group>"; };
+		D4CDCBA629F965D300CD7588 /* mother_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_eyes.png; sourceTree = "<group>"; };
+		D4CDCBA729F965D300CD7588 /* mother_skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_skin.png; sourceTree = "<group>"; };
+		D4CDCBA829F965D300CD7588 /* mother_nose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother_nose.png; sourceTree = "<group>"; };
+		D4CDCBAF29F965DA00CD7588 /* mother.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mother.scn; sourceTree = "<group>"; };
 		FE47713129E5788400764380 /* MazeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeModel.swift; sourceTree = "<group>"; };
 		FE47713529E583CD00764380 /* SKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScene.swift; sourceTree = "<group>"; };
 		FED8A9B129D5A82E00457F14 /* APetersJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APetersJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,13 +161,13 @@
 		D4649D9329F8C551005D0AC1 /* 3DMother */ = {
 			isa = PBXGroup;
 			children = (
-				D4649DC529F943A0005D0AC1 /* mother_eyes.png */,
-				D4649DC729F943A0005D0AC1 /* mother_hair.png */,
-				D4649DC629F943A0005D0AC1 /* mother_nose.png */,
-				D4649DC829F943A0005D0AC1 /* mother_skin.png */,
-				D4649DC929F943A0005D0AC1 /* mother.dae */,
-				D4649DE229F943B7005D0AC1 /* mother.scn */,
-				D4649DC429F943A0005D0AC1 /* motherdress.png */,
+				D4CDCBA429F965D300CD7588 /* mother_dress.png */,
+				D4CDCBA629F965D300CD7588 /* mother_eyes.png */,
+				D4CDCBA529F965D300CD7588 /* mother_hair.png */,
+				D4CDCBA829F965D300CD7588 /* mother_nose.png */,
+				D4CDCBA729F965D300CD7588 /* mother_skin.png */,
+				D4CDCBA329F965D300CD7588 /* mother.dae */,
+				D4CDCBAF29F965DA00CD7588 /* mother.scn */,
 			);
 			path = 3DMother;
 			sourceTree = "<group>";
@@ -391,19 +391,19 @@
 			files = (
 				D4649DC029F9429D005D0AC1 /* doll_hair.png in Resources */,
 				D4649DDD29F943AB005D0AC1 /* eyes.png in Resources */,
-				D4649DCE29F943A0005D0AC1 /* mother_skin.png in Resources */,
-				D4649DE329F943B7005D0AC1 /* mother.scn in Resources */,
 				D4649DBF29F9429D005D0AC1 /* doll_hair.001.png in Resources */,
+				D4CDCBB029F965DA00CD7588 /* mother.scn in Resources */,
 				D4649DBD29F9429D005D0AC1 /* doll_eyes.png in Resources */,
-				D4649DCC29F943A0005D0AC1 /* mother_nose.png in Resources */,
+				D4CDCBAB29F965D300CD7588 /* mother_hair.png in Resources */,
 				FED8A9C229D5A82F00457F14 /* Assets.xcassets in Resources */,
-				D4649DCB29F943A0005D0AC1 /* mother_eyes.png in Resources */,
-				D4649DCA29F943A0005D0AC1 /* motherdress.png in Resources */,
 				D4649DC329F942A5005D0AC1 /* doll.scn in Resources */,
+				D4CDCBAD29F965D300CD7588 /* mother_skin.png in Resources */,
+				D4CDCBAE29F965D300CD7588 /* mother_nose.png in Resources */,
 				D4649DDA29F943AB005D0AC1 /* pants.png in Resources */,
-				D4649DCD29F943A0005D0AC1 /* mother_hair.png in Resources */,
+				D4CDCBA929F965D300CD7588 /* mother.dae in Resources */,
 				D4649DDB29F943AB005D0AC1 /* hair.png in Resources */,
 				D4649DDC29F943AB005D0AC1 /* body.png in Resources */,
+				D4CDCBAC29F965D300CD7588 /* mother_eyes.png in Resources */,
 				D4649DDE29F943AB005D0AC1 /* nose.png in Resources */,
 				D4649DDF29F943AB005D0AC1 /* boy.dae in Resources */,
 				D4649DD829F943AB005D0AC1 /* dolleyes.png in Resources */,
@@ -412,7 +412,7 @@
 				FED8A9C529D5A82F00457F14 /* LaunchScreen.storyboard in Resources */,
 				D4649DD929F943AB005D0AC1 /* head.png in Resources */,
 				D4649DBE29F9429D005D0AC1 /* doll_skin.png in Resources */,
-				D4649DCF29F943A0005D0AC1 /* mother.dae in Resources */,
+				D4CDCBAA29F965D300CD7588 /* mother_dress.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +653,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 37U5X9NN8C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -685,7 +685,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 37U5X9NN8C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
