@@ -26,9 +26,12 @@ class MenuScene: SKScene {
     }()
 
     override func didMove(to view: SKView) {
-        addChild(peterImage)
-        addChild(button)
-        self.backgroundColor = UIColor(named: "background")!
+
+        if children.isEmpty {
+            addChild(peterImage)
+            addChild(button)
+            self.backgroundColor = UIColor(named: "background")!
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

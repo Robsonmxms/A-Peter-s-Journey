@@ -217,6 +217,8 @@ class MazeScene: SKScene {
 extension MazeScene: SKPhysicsContactDelegate {
 
     func didBegin(_ contact: SKPhysicsContact) {
+
+
         let bodyA = contact.bodyA.node
         let bodyB = contact.bodyB.node
 

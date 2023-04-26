@@ -19,6 +19,9 @@
 		146B2B1329D7136D00DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
 		146B2B1B29D71F4A00DFB563 /* CircleNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */; };
 		146B2B2229D722D300DFB563 /* MazeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B2B1229D7136D00DFB563 /* MazeScene.swift */; };
+		14E5D16129F9674700660AA8 /* OnBoardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5D16029F9674700660AA8 /* OnBoardImage.swift */; };
+		14E5D16329F9685100660AA8 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5D16229F9685100660AA8 /* OnBoardView.swift */; };
+		14E5D16529F99BA200660AA8 /* MenuSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E5D16429F99BA200660AA8 /* MenuSceneView.swift */; };
 		4C9BB8B229F7FF4E00D20FC0 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */; };
 		4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BB8B329F8004100D20FC0 /* GameBoard.swift */; };
 		D4649DBD29F9429D005D0AC1 /* doll_eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = D4649DB829F9429D005D0AC1 /* doll_eyes.png */; };
@@ -72,6 +75,9 @@
 		146B2B1229D7136D00DFB563 /* MazeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeScene.swift; sourceTree = "<group>"; };
 		146B2B1829D71F4A00DFB563 /* APetersJourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APetersJourneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146B2B1A29D71F4A00DFB563 /* CircleNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNodeTest.swift; sourceTree = "<group>"; };
+		14E5D16029F9674700660AA8 /* OnBoardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardImage.swift; sourceTree = "<group>"; };
+		14E5D16229F9685100660AA8 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
+		14E5D16429F99BA200660AA8 /* MenuSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSceneView.swift; sourceTree = "<group>"; };
 		4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		4C9BB8B329F8004100D20FC0 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		D4649DB829F9429D005D0AC1 /* doll_eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doll_eyes.png; sourceTree = "<group>"; };
@@ -127,6 +133,15 @@
 				1434F5E229DB16A800188C8F /* SphereSKNodeTest.swift */,
 			);
 			path = APetersJourneyTests;
+			sourceTree = "<group>";
+		};
+		14E5D15F29F9670500660AA8 /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				14E5D16029F9674700660AA8 /* OnBoardImage.swift */,
+				14E5D16229F9685100660AA8 /* OnBoardView.swift */,
+			);
+			path = OnBoard;
 			sourceTree = "<group>";
 		};
 		D4649D6529F8BD3B005D0AC1 /* 3DDoll */ = {
@@ -249,6 +264,7 @@
 		FED8A9CD29D5A91F00457F14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				14E5D15F29F9670500660AA8 /* OnBoard */,
 				FED8A9D129D5A9DB00457F14 /* Maze */,
 			);
 			path = Presentation;
@@ -282,6 +298,7 @@
 			children = (
 				146B2B1229D7136D00DFB563 /* MazeScene.swift */,
 				4C9BB8B129F7FF4E00D20FC0 /* MenuScene.swift */,
+				14E5D16429F99BA200660AA8 /* MenuSceneView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -461,6 +478,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9BB8B229F7FF4E00D20FC0 /* MenuScene.swift in Sources */,
+				14E5D16129F9674700660AA8 /* OnBoardImage.swift in Sources */,
+				14E5D16529F99BA200660AA8 /* MenuSceneView.swift in Sources */,
+				14E5D16329F9685100660AA8 /* OnBoardView.swift in Sources */,
 				FED8A9BD29D5A82E00457F14 /* MazeView.swift in Sources */,
 				FED8A9B529D5A82E00457F14 /* PeterJourneyApp.swift in Sources */,
 				4C9BB8B429F8004100D20FC0 /* GameBoard.swift in Sources */,
@@ -653,7 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -685,7 +705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "A Peter's Journey";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
