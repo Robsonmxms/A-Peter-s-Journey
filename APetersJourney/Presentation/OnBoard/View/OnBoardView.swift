@@ -12,15 +12,18 @@ struct OnboardingView: View {
 
     var body: some View {
         ZStack {
+            Color("background")
             ScrollView {
                 VStack {
                     VStack {
                         Text("Bem vindo ao A Peter's Journey!")
                             .font(.largeTitle)
+                            .foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(.vertical, 5)
                         Text("Capture a boneca com o menino, mas cuidado para mamãe não te pegar 😅")
                             .font(.title2)
+                            .foregroundColor(.white)
                             .padding(.horizontal, 5)
                     }
                     .padding(.vertical, 5)
@@ -58,6 +61,7 @@ struct OnboardingView: View {
                             alignment: .center
                         )
                         .font(.system(size: 40, weight: .regular))
+                        .foregroundColor(.white)
                 }
                 .buttonStyle(.borderedProminent)
                 .contentShape(Rectangle())

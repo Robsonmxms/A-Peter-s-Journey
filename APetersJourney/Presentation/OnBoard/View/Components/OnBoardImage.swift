@@ -20,7 +20,9 @@ struct OnBoardImage: View {
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.headline)
+                    .foregroundColor(.white)
                 Text(text)
+                    .foregroundColor(.white)
             }
             Spacer(minLength: 5)
         }
