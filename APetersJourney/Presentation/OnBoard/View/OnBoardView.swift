@@ -12,7 +12,6 @@ struct OnboardingView: View {
 
     var body: some View {
         ZStack {
-            Color("background")
             ScrollView {
                 VStack {
                     VStack {
@@ -71,7 +70,7 @@ struct OnboardingView: View {
                 }
                 .padding()
             }
-        }
+        }.background(Color("background"))
     }
 }
 
